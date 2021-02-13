@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.concurrent.Executors;
 
-public class Sample {
+public class StarterSample {
     /**
      * Wrote some code in an anonimous class
      * And we pass it to another piece of code
@@ -28,6 +28,7 @@ public class Sample {
         };
 
         Comparator<String> comparator2 = (String s1, String s2) -> Integer.compare(s1.length(), s2.length());
+        Comparator<String> comparator3 = (s1, s2) -> Integer.compare(s1.length(), s2.length());
 
         String[] tabString = new String[]{"one", "two", "sixteen", "five"};
         System.out.println(Arrays.toString(tabString) );
