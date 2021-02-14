@@ -16,5 +16,11 @@ public class MainComparator {
         Comparator<Person> cmpPersonAge = Comparator.comparing(p -> p.getAge());
         Comparator<Person> cmpPersonLastName = Comparator.comparing(Person::getLastName);
 
+        Comparator<Person> cmp1 = cmpPersonAge.thenComparing(cmpPersonLastName);
+
+        Comparator<Person> cmp2 = Comparator.comparing(Person::getLastName)
+            .thenComparing(Person::getFirstName)
+            .thenComparing(Person::getAge)
+            ;
     }
 }
